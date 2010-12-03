@@ -1,1 +1,2 @@
 class A
+some modif
