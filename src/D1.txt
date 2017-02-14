@@ -1,2 +1,4 @@
 d file
 modif
+
+bug fix for is7
