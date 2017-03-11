@@ -8,6 +8,11 @@ import java.util.List;
 public class Table {
     private String name;
     private int capacity;
+
+    public Table(int capacity) {
+        this.capacity = capacity;
+    }
+
     private List<People> persons;
 
     public String getName() {
