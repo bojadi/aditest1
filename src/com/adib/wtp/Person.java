@@ -3,11 +3,11 @@ package com.adib.wtp;
 /**
  * Created by adrian.bojani on 3/11/2017.
  */
-public class People {
+public class Person {
     private String name;
     private int age;
 
-    public People() {
+    public Person() {
     }
 
     public String getName() {
