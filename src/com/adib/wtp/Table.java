@@ -13,7 +13,7 @@ public class Table {
         this.capacity = capacity;
     }
 
-    private List<People> persons;
+    private List<Person> persons;
 
     public String getName() {
         return name;
@@ -31,11 +31,11 @@ public class Table {
         this.capacity = capacity;
     }
 
-    public List<People> getPersons() {
+    public List<Person> getPersons() {
         return persons;
     }
 
-    public void setPersons(List<People> persons) {
+    public void setPersons(List<Person> persons) {
         this.persons = persons;
     }
 }
