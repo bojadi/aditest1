@@ -1,12 +1,14 @@
 package com.adib.wtp;
 
+import com.adib.wtp.view.PersonView;
+
 /**
  * Created by adrian.bojani on 3/11/2017.
  */
 public class Main {
     public void showPersons(){
         System.out.println("show Persons");
-        PeopleView peopleView=new PeopleView();
+        PersonView peopleView=new PersonView();
         peopleView.setTitle("People view");
         peopleView.setSize(400,400);
         peopleView.show();
