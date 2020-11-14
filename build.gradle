@@ -1,0 +1,36 @@
+plugins {
+    id 'nu.studer.credentials' version '1.0.1'
+}
+
+apply plugin: 'maven'
+
+group = 'com.adib.wtp.'
+version =  releaseVersion+getBuildEnvironmentSpecifcVersionAppendix()
+
+def version = releaseVersion+getBuildEnvironmentSpecifcVersionAppendix()
+
+
+
+configurations {
+    config
+}
+
+def getBuildEnvironmentSpecifcVersionAppendix() {
+    // if we are on TeamCity the current builder number is used to build the version
+    hasProperty('teamcity') ? '.' + teamcity['build.number'] : '-SNAPSHOT'
+}
+
+// create deploy artifact
+task zipRelease(type: Zip) {
+    destinationDir file("release")
+    from "config"
+    into "config"
+    doLast {
+        println "##teamcity[buildNumber '${version}']"
+    }
+}
+
+artifacts {
+    config zipRelease
+}
+
